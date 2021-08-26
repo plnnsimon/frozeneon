@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <Shop />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Header from './components/Header.vue'
+import Shop from './components/Shop.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Header,
+    Shop
+  },
+  
 }
 </script>
 
-<style>
+<style lang='scss'>
+@font-face {
+    font-family: 'LeksaSans';
+    src: url('./assets/font/LeksaSans-Black.eot');
+    src: local('☺'), url('./assets/font/LeksaSans-Black.woff') format('woff'), url('./assets/font/LeksaSans-Black.ttf') format('truetype'), url('./assets/font/LeksaSans-Black.svg') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeksaSans';
+    src: url('./assets/font/LeksaSans-Bold.eot');
+    src: local('☺'), url('./assets/font/LeksaSans-Bold.woff') format('woff'), url('./assets/font/LeksaSans-Bold.ttf') format('truetype'), url('./assets/font/LeksaSans-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: url('./assets/images/backgroundImage.png') no-repeat;
+  background-size: cover;
 }
 </style>
